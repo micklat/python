@@ -1579,7 +1579,7 @@ else:
       "libpython1.5.so" & dllver]
   
 for libName in items(libNames): 
-  lib = loadLib(libName)
+  lib = loadLib(libName, global_symbols=true)
   if lib != nil: break
 
 if lib == nil: quit("could not load python library")
